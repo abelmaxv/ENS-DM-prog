@@ -48,9 +48,21 @@ unsigned int btree_gc(btree_t* vars[])
     
 }
 
-int main()
+//Code from question E
+int main(void) 
 {
-    bool res = BTREE_ISFREE(mem);
-    if(res) printf("ok \n");
+    btree_t* vars[2];
+    vars[0] = btree_alloc();
+    vars[1] = btree_alloc();
+    BTREE_PARENT(vars[0]) = vars[1];
+    BTREE_LSON(vars[1]) = vars[0];
+    BTREE_RSON(vars[1]) = BTREE_LSON(vars[0]) = BTREE_RSON(vars[0]) = NULL; vars[1] = NULL;
+    printf("%d collected nodes\n", btree_gc(vars));
     return 0;
 }
+// Result after execution : 
+/*
+
+
+*/
+
