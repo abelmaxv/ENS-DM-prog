@@ -61,3 +61,5 @@ dm-2023.pdf
 
 #MacOS file
 *.DS_Store
+
+*.vscode/
