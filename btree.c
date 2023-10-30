@@ -1,3 +1,10 @@
+/*
+_______________________________________
+EXERCICE 1 DM PROGRAMMATION ENS L3 INFO
+ABEL VERLEY
+_______________________________________
+*/
+
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
