@@ -26,5 +26,4 @@ module SBtree (X : BTREE) =
           Printf.printf "%s" (X.get_label n)
         in
         post_visit_node (X.get_root tree)
-
   end ;;
