@@ -16,4 +16,15 @@ module type BTREE =
     val get_label : node -> string
   end ;;
 
-  (* Question B *)
+(* Question B *)
+module SBtree (X : BTREE) = 
+  struct 
+    let post_visit tree = 
+        let rec post_visit_node n = 
+          let node_list = X.get_sons n in
+          List.iter post_visit_node node_list;
+          Printf.printf "%s" (X.get_label n)
+        in
+        post_visit_node (X.get_root tree)
+
+  end ;;

@@ -54,10 +54,13 @@ dkms.conf
 
 # Binary files
 btree
-
+module
 
 
 #MacOS file
 *.DS_Store
-
 *.vscode/
+
+#OCaml compilation files
+*.cmi
+*.cmx
